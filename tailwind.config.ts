@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// Gaming-specific colors
+				'gaming-purple': 'hsl(270 91% 65%)',
+				'gaming-cyan': 'hsl(180 91% 60%)',
+				'gaming-gold': 'hsl(45 91% 60%)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +79,30 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'pulse-neon': {
+					'0%, 100%': { 
+						boxShadow: '0 0 20px hsl(217 91% 60% / 0.3)'
+					},
+					'50%': { 
+						boxShadow: '0 0 30px hsl(217 91% 60% / 0.6), 0 0 40px hsl(217 91% 60% / 0.3)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'pulse-neon': 'pulse-neon 2s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'hero-gradient': 'linear-gradient(135deg, hsl(217 91% 60% / 0.2), hsl(270 91% 65% / 0.2))',
+				'card-gradient': 'linear-gradient(145deg, hsl(220 15% 12%), hsl(220 15% 15%))',
+				'accent-gradient': 'linear-gradient(90deg, hsl(142 76% 36%), hsl(180 91% 60%))'
 			}
 		}
 	},
